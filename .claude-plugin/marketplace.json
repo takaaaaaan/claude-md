@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "CLAUDE.md house-style generator and aligner for Claude Code",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "claude-md",
       "source": ".",
       "description": "Generate and align CLAUDE.md files in the user's house style — claude-md-init creates one from scratch by analyzing the codebase (/init-like), claude-md-align brings an existing CLAUDE.md into the canonical format (preserve + propose).",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "documentation",
       "keywords": ["claude-md", "init", "scaffold", "house-style", "documentation"]
     }

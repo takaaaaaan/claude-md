@@ -37,10 +37,12 @@ description: |
    - **並べ替え**（移動するセクション）
 4. **提案を提示** — 「追加 / 移動 / 修正したい箇所」と各理由を箇条書きで user に見せる。差分が分かる形で。
 5. **OK を得たぶんだけ適用** して `CLAUDE.md` を書き出す。却下された変更は入れない。
-6. コミットするなら Commit style に従う。
+6. **CLAUDE.local.md（任意）** — CLAUDE.md を整え終えたら、**AskUserQuestion で「個人ローカル専用の CLAUDE.local.md も作るか」を確認**する。作る場合だけ `fixed-blocks.md` の「CLAUDE.local.md テンプレ」で生成し（既にあれば中身を保全し、欠けた見出しだけ補う形で提案）、`.gitignore` に `CLAUDE.local.md` を登録する（未登録なら追記を提案、既にあれば触らない）。要らなければスキップ。
+7. コミットするなら Commit style に従う。**`CLAUDE.local.md` はコミットしない**（`.gitignore` 済み）。
 
 ## やらないこと
 
 - ゼロからの全面再生成（手書きのニュアンスを失う。新規は `claude-md-init`）。
 - 既存 B セクションの無断書き換え。
 - user の承認を待たずに保存すること。
+- user に確認せず CLAUDE.local.md を勝手に作る、または共有すべき内容を CLAUDE.local.md 側に逃がすこと。

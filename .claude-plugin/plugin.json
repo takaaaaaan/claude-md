@@ -1,6 +1,6 @@
 {
   "name": "claude-md",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Generate and align CLAUDE.md files in the user's house style — claude-md-init creates one from scratch by analyzing the codebase (/init-like), claude-md-align brings an existing CLAUDE.md into the canonical format (preserve + propose).",
   "author": {
     "name": "takaaaaaan",

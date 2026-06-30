@@ -33,10 +33,12 @@ description: |
 3. **A セクションを貼る** — `fixed-blocks.md` の逐語をそのまま挿入。worktree 節の `<DEFAULT_PORTS>` / `<PORT_RANGE>` は解析した実ポートで置換（検出できなければ user に確認）。
 4. **C を判定** — 姉妹/関連リポがあればセクション 12 を追加（相手の構造を Q&A 形式で要約）。無ければ省く。
 5. **ドラフト提示** — 完成稿を user に見せ、**OK を得てから** `CLAUDE.md` を書き出す（メンテナンス方針と同じく、勝手に確定しない）。
-6. 書き出し後、コミットするなら Commit style（韓国語・`git add -A` 禁止・パス明示）に従う。
+6. **CLAUDE.local.md（任意）** — CLAUDE.md を確定したら、**AskUserQuestion で「個人ローカル専用の CLAUDE.local.md も作るか」を確認**する。作る場合だけ `fixed-blocks.md` の「CLAUDE.local.md テンプレ」で生成し（検出できたローカルポートは穴埋め可）、`.gitignore` に `CLAUDE.local.md` を登録する（未登録なら追記を提案、既にあれば触らない）。要らなければスキップ。
+7. コミットするなら Commit style（韓国語・`git add -A` 禁止・パス明示）に従う。**`CLAUDE.local.md` はコミットしない**（`.gitignore` 済み）。
 
 ## やらないこと
 
 - 既存 CLAUDE.md の上書き（→ `claude-md-align`）。
 - 解析で裏が取れない記述の創作。
 - user の OK を待たずにファイルを確定すること。
+- user に確認せず CLAUDE.local.md を勝手に作る、または共有すべき内容を CLAUDE.local.md 側に逃がすこと。
